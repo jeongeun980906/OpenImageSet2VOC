@@ -3,3 +3,4 @@ class.csv
 set.txt
 .python-version
 data.json
+__pycache__/*

@@ -31,7 +31,7 @@ with open('set.txt','r') as f:
 
 ROOT = '/data/jeongeun/openimage'
 for imageid in imageids:
-    path = '{}/train/{}.jpg'.format(ROOT, imageid)
+    path = '{}/JPEGImages/{}.jpg'.format(ROOT, imageid)
     width, height = imagesize.get(path)
     annots = df.loc[df['ImageID']==imageid]
     writer = Writer(path, width, height)
@@ -41,13 +41,13 @@ for imageid in imageids:
             label = class_dict[label]
             Xmin = int(width*annots['XMin'][i])
             Xmax = int(width*annots['XMax'][i])
-            Ymin = int(width*annots['YMin'][i])
-            Ymax = int(width*annots['YMax'][i])
+            Ymin = int(height*annots['YMin'][i])
+            Ymax = int(height*annots['YMax'][i])
             writer.addObject(label, Xmin, Ymin, Xmax, Ymax)
-    writer.save('{}/{}.xml'.format(ROOT,imageid))
+    writer.save('{}/Annotations/{}.xml'.format(ROOT,imageid))
     # writer.save('img.xml')
-    break
-SET = ROOT +'/ImageSets/Main/furniture.txt'
+
+SET = ROOT +'/ImageSets/Main/train.txt'
 with open(SET,'w') as f:
     for imageid in imageids:
         f.writelines(imageid+'\n')
