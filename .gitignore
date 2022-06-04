@@ -1,6 +1,7 @@
 annotation_train.csv
 class.csv
 set.txt
+set2.txt
 .python-version
 data.json
 __pycache__/*

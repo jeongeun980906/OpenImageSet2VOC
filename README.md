@@ -39,7 +39,20 @@ python downloader.py set.txt --download_folder=[your path] --num_processes=5
 ```
 This code download the images
 
+If the image is not downloaded fully, then try this:
+```
+python check_missing.py
+python downloader.py set2.txt --download_folder=[your path] --num_processes=5
+```
+
+
 ```
 python annot.py
 ```
 Please change the ROOT path variable. This code makes the annotation file
+
+if the annotation is not fully done, you can resume it by
+
+```
+python annot.py --resume
+```

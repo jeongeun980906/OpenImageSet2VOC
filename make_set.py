@@ -3,7 +3,7 @@ import json
 class_dis = pd.read_csv('class.csv')
 
 landmark_names = ['Shelf','Chest of drawers','Kitchen & dining room table','Coffee table','Table','Desk','Gas stove','Chair', #'Person',
-        'Sink', 'Couch','Door', 'Sofa bed', 'Bed', 'Bookcase','Refrigerator','Piano','Television','Toilet','Cabinetry']
+        'Sink', 'Couch','Bottle', 'Sofa bed', 'Bed', 'Bookcase','Refrigerator','Piano','Television','Toilet','Cabinetry']
 print(len(landmark_names))
 
 class_dict = {}
