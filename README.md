@@ -46,6 +46,7 @@ python downloader.py set2.txt --download_folder=[your path] --num_processes=5
 ```
 
 
+For annotation,
 ```
 python annot.py
 ```
